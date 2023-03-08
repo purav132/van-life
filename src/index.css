@@ -1,13 +1,158 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  font-style: normal;
+}
+
+.container {
+  width: 550px;
+  margin: auto;
+}
+
+header {
+  /* width: 550px; */
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  background: #fff7ed;
+}
+
+.title {
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 25.3531px;
+  line-height: 40px;
+  color: #000000;
+}
+
+nav > a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 23px;
+  color: #4d4d4d;
+}
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 65px 30px;
+
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.46),
+      rgba(0, 0, 0, 0.46)
+    ),
+    url(./assets/images/home-background.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.home-title {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 42px;
+  color: #ffffff;
+}
+
+.home-text {
+  margin-top: -4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.home-link {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #ff8c38;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 32px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.about-pic {
+  width: 100%;
+  height: 100%;
+}
+
+.about-title {
+  margin-top: 48px;
+  margin-inline: 25px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: #161616;
+}
+
+.about-text {
+  margin-inline: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-van {
+  margin-top: 50px;
+  margin-inline: 25px;
+  padding: 32px 37px;
+  background: #ffcc8d;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.about-van-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #161616;
+}
+
+.about-van-link {
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: #161616;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15.9462px;
+  line-height: 24px;
+  color: #ffffff;
 }
