@@ -12,7 +12,9 @@ export default function Vans() {
 
   //   console.log(vansData);
 
-  const vanComponents = vansData.map((van) => <DisplayAllVans van={van} />);
+  const vanComponents = vansData.map((van) => (
+    <DisplayAllVans key={van.id} van={van} />
+  ));
 
   return (
     <div className="vans-page">

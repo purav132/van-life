@@ -2,14 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function DisplayAllVans(props) {
-  function typeStyle() {
-    if (props.van.type === "luxury") {
-      return { backgroundColor: "black" };
-    } else if (props.van.type === "rugged") {
-      return { backgroundColor: "#115E59" };
-    }
-  }
-
   return (
     <div className="van">
       <Link to={`/vans/${props.van.id}`}>
