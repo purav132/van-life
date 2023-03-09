@@ -27,7 +27,7 @@ export default function About() {
           <span>Your destination is waiting.</span>
           <span>Your van is ready.</span>
         </div>
-        <Link to="/van" className="about-van-link">
+        <Link to="/vans" className="about-van-link">
           Explore our vans
         </Link>
       </div>
