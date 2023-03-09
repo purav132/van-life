@@ -11,6 +11,7 @@ body {
 }
 
 .container {
+  background: #fff7ed;
   width: 550px;
   margin: auto;
 }
@@ -39,7 +40,7 @@ header a:hover {
 nav {
   display: flex;
   flex-direction: row;
-  gap: 15px;
+  gap: 20px;
 }
 
 nav > a {
@@ -357,4 +358,23 @@ nav > a {
   text-align: center;
   color: #ffffff;
   cursor: pointer;
+}
+
+.host-nav {
+  padding: 30px 25px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #4d4d4d;
+  gap: 30px;
+}
+
+.host-nav a:hover {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-decoration-line: underline;
+  color: #161616;
 }

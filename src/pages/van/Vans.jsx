@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayAllVans from "../assets/components/DisplayAllVans";
+import DisplayAllVans from "../../components/DisplayAllVans";
 
 export default function Vans() {
   const [vansData, setVansData] = React.useState([]);
