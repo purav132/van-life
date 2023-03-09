@@ -270,18 +270,15 @@ nav > a {
   justify-content: center;
   color: #ffead0;
 }
-.van-type.simple:hover,
-.van-type.simple.selected {
+.van-type.simple {
   background-color: #e17654;
 }
 
-.van-type.rugged:hover,
-.van-type.rugged.selected {
+.van-type.rugged {
   background-color: #115e59;
 }
 
-.van-type.luxury:hover,
-.van-type.luxury.selected {
+.van-type.luxury {
   background-color: #161616;
 }
 
@@ -360,4 +357,5 @@ nav > a {
   align-items: center;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 }

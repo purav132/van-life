@@ -13,7 +13,7 @@ export default function DisplayAllVans(props) {
             <span className="van-day">/day</span>
           </div>
         </div>
-        <div className={`van-type ${props.van.type} selected`}>
+        <div className={`van-type ${props.van.type}`}>
           {props.van.type[0].toUpperCase() + props.van.type.slice(1)}
         </div>
       </Link>

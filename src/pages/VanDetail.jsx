@@ -11,7 +11,7 @@ export default function VanDetail() {
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
       .then((data) => setVan(data.vans));
-  }, []);
+  }, [params.id]);
 
   return (
     <div className="van-details-page">
@@ -19,7 +19,7 @@ export default function VanDetail() {
         &larr; Back to all vans
       </Link>
       <img src={van.imageUrl} alt="" className="van-details-image" />
-      <div className={`van-type ${van.type} selected`}>{van.type}</div>
+      <div className={`van-type ${van.type}`}>{van.type}</div>
       <h1 className="van-details-name">{van.name}</h1>
       <div className="van-details-price-day">
         <span className="van-details-price">${van.price}</span>
