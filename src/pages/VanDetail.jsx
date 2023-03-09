@@ -13,7 +13,7 @@ export default function VanDetail() {
       .then((data) => setVan(data.vans));
   }, [params.id]);
 
-  return (
+  return van ? (
     <div className="van-details-page">
       <Link to="/vans" className="van-details-back-link">
         &larr; Back to all vans
@@ -28,5 +28,7 @@ export default function VanDetail() {
       <p className="van-details-description">{van.description}</p>
       <button className="van-details-btn">Rent this van</button>
     </div>
+  ) : (
+    <h1>Loading...</h1>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayAllVans from "./DisplayAllVans";
+import DisplayAllVans from "../assets/components/DisplayAllVans";
 
 export default function Vans() {
   const [vansData, setVansData] = React.useState([]);
@@ -9,8 +9,6 @@ export default function Vans() {
       .then((res) => res.json())
       .then((data) => setVansData(data.vans));
   }, []);
-
-  //   console.log(vansData);
 
   const vanComponents = vansData.map((van) => (
     <DisplayAllVans key={van.id} van={van} />
