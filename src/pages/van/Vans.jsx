@@ -1,5 +1,5 @@
 import React from "react";
-import DisplayAllVans from "../../components/DisplayAllVans";
+import { Link } from "react-router-dom";
 
 export default function Vans() {
   const [vansData, setVansData] = React.useState([]);
@@ -10,9 +10,23 @@ export default function Vans() {
       .then((data) => setVansData(data.vans));
   }, []);
 
-  const vanComponents = vansData.map((van) => (
-    <DisplayAllVans key={van.id} van={van} />
-  ));
+  const vanComponents = vansData.map((van) => {
+    return (
+      <div key={van.id} className="van">
+        <Link to={`${van.id}`}>
+          <img className="van-image" src={van.imageUrl} alt="" />
+          <div className="van-name-price">
+            <h1 className="van-name">{van.name}</h1>
+            <div>
+              <span className="van-price">${van.price}</span>
+              <span className="van-day">/day</span>
+            </div>
+          </div>
+          <div className={`van-type ${van.type}`}>{van.type}</div>
+        </Link>
+      </div>
+    );
+  });
 
   return (
     <div className="vans-page">
