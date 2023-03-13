@@ -31,7 +31,7 @@ export default function HostVanDetail() {
         <div className="host-van-details-common">
           <img className="host-vans-details-img" src={van.imageUrl} alt="" />
           <div>
-            <div className={`van-type ${van.type}`}>{van.type}</div>
+            <div className={`van-type ${van.type} selected`}>{van.type}</div>
             <div className="host-vans-details-name">{van.name}</div>
             <div>
               <span className="host-vans-details-price">${van.price}</span>
