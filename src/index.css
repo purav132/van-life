@@ -595,3 +595,7 @@ footer {
   color: #ffffff;
   text-decoration: none;
 }
+
+.error-page {
+  padding: 50px 25px;
+}

@@ -1,16 +1,22 @@
 import React from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
+import { getVans } from "../../api";
+
+export function loader() {
+  return getVans();
+}
 
 export default function Vans() {
-  const [vansData, setVansData] = React.useState([]);
+  // const [vansData, setVansData] = React.useState([]);
 
-  React.useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => setVansData(data.vans));
-  }, []);
+  // React.useEffect(() => {
+  //   fetch("/api/vans")
+  //     .then((res) => res.json())
+  //     .then((data) => setVansData(data.vans));
+  // }, []);
 
   const [searchParams, setSearchParams] = useSearchParams();
+  const vansData = useLoaderData();
   const typeFilter = searchParams.getAll("type");
   // console.log(typeFilter);
 
