@@ -5,6 +5,7 @@ import {
   Form,
   useActionData,
   useNavigation,
+  Link,
 } from "react-router-dom";
 import { loginUser } from "../api";
 
@@ -61,7 +62,7 @@ export default function Login() {
         </button>
       </Form>
       <div>
-        Don't have an account? <span>Create one now</span>
+        Don't have an account? <Link>Create one now</Link>
       </div>
     </div>
   );

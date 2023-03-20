@@ -658,9 +658,13 @@ footer {
   margin-bottom: 10px;
 }
 
-.login-page div > span {
+.login-page div > a {
+  text-decoration: none;
   font-weight: 600;
   color: #ff8c38;
+}
+.login-page > div > a:hover {
+  text-decoration: underline;
 }
 
 .login-error {
