@@ -6,7 +6,7 @@ export default function About() {
   return (
     <div className="about-page">
       <img className="about-pic" src={backgroundImg} alt="" />
-      <h1 className="about-title">
+      <h1 className="abou-title">
         Don't squeeze in a sedan when you could relax in a van.
       </h1>
       <div className="about-text">

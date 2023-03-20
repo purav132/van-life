@@ -439,7 +439,6 @@ footer {
   margin-bottom: 15px;
   padding: 15px 20px;
   gap: 15px;
-  cursor: pointer;
 }
 
 .host-vans-component a {
@@ -598,4 +597,398 @@ footer {
 
 .error-page {
   padding: 50px 25px;
+}
+
+.login-page {
+  text-align: center;
+  padding: 50px 25px;
+}
+
+.login-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 24px;
+  color: #161616;
+  margin-bottom: 48px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > input {
+  height: 42px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+}
+
+.login-form-input1 {
+  border-radius: 6px 6px 0px 0px;
+}
+
+.login-form-input2 {
+  border-radius: 0px 0px 6px 6px;
+}
+
+.login-form > button {
+  margin-top: 25px;
+  height: 55px;
+  background: #ff8c38;
+  border-radius: 6px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.login-form > button:disabled {
+  background: #aaaaaa;
+  cursor: not-allowed;
+}
+
+.login-page > div {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #161616;
+  margin-bottom: 10px;
+}
+
+.login-page div > span {
+  font-weight: 600;
+  color: #ff8c38;
+}
+
+.login-error {
+  color: red;
+  margin-top: 0px;
+}
+
+.loading {
+  margin: auto;
+  margin-block: 50px;
+}
+
+.dashboard-income {
+  background: #ffead0;
+  padding: 35px 25px;
+}
+
+.dashboard-income > div {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.dashboard-income > div > a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  text-decoration: none;
+}
+
+.dashboard-income > div > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.dashboard-income > div > div > span {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #4d4d4d;
+}
+
+.dashboard-income > h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 22px;
+  color: #161616;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.dashboard-income > h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 38px;
+  color: #161616;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.dashboard-review {
+  background: #ffddb3;
+  padding: 45px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard-review > div {
+  display: flex;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  color: #161616;
+}
+
+.dashboard-review-point {
+  display: flex;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  color: #161616;
+}
+
+.dashboard-review-point > span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.dashboard-review > a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  text-decoration: none;
+}
+.dashboard-review > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.dashboard-vans {
+  padding: 40px 25px;
+}
+
+.dashboard-vans-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-vans-head > h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  color: #161616;
+}
+.dashboard-vans-head > a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+}
+.dashboard-vans-head > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.dashboard-vans-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+}
+
+.dashboard-vans-component > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-vans-component > a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+}
+.dashboard-vans-component > a:hover {
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.income {
+  padding: 30px 25px;
+}
+
+.income > h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 22px;
+  color: #161616;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.income > h1 {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 38px;
+  color: #161616;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.income > h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d4d4d;
+  margin-bottom: 30px;
+}
+.income > h3 > span {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.income > img {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.income-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 22px;
+  color: #161616;
+  margin-bottom: 30px;
+}
+
+.income-heading > h3 {
+  margin: 0;
+}
+
+.income-heading > span {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.income-heading > span > span {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.income-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  background: white;
+  padding: 35px 30px;
+}
+
+.income-component > h2 {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 32px;
+  color: #161616;
+  margin: 0;
+}
+
+.income-component > span {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: #4d4d4d;
+}
+
+.reviews {
+  padding: 20px 25px;
+}
+
+.reviews-heading {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.reviews-heading > h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 34px;
+  color: #161616;
+}
+
+.reviews-heading > p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #4d4d4d;
+}
+
+.reviews-heading > p > span {
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.reviews > img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.reviews > h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  color: #161616;
+  margin-bottom: 20px;
+}
+
+.reviews-component {
+  margin-bottom: 30px;
+}
+
+.reviews-component > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  margin-block: 8px;
+}
+.reviews-component > div > h3 {
+  margin: 0;
+  color: #161616;
+}
+.reviews-component > div > span {
+  color: #8c8c8c;
+}
+
+.reviews-component > p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #161616;
+  margin-bottom: 25px;
 }

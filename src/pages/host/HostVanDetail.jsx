@@ -1,14 +1,30 @@
-import React from "react";
-import { Link, useParams, Outlet, NavLink } from "react-router-dom";
+import React, { Suspense } from "react";
+import {
+  Link,
+  Outlet,
+  NavLink,
+  useLoaderData,
+  defer,
+  Await,
+} from "react-router-dom";
+import { getVans } from "../../api";
+import Loading from "../../components/Loading";
+
+export function loader({ params }) {
+  const url = `/api/host/vans/${params.id}`;
+  return defer({ van: getVans(url) });
+}
 
 export default function HostVanDetail() {
-  const [van, setVan] = React.useState([]);
-  const params = useParams();
-  React.useEffect(() => {
-    fetch(`/api/host/vans/${params.id}`)
-      .then((res) => res.json())
-      .then((data) => setVan(data.vans[0]));
-  }, [params.id]);
+  // const [van, setVan] = React.useState(null);
+  // const { id } = useParams();
+  // React.useEffect(() => {
+  //   fetch(`/api/host/vans/${id}`)
+  //     .then((res) => res.json())
+  //     .then((data) => setVan(data.vans));
+  // }, [id]);
+
+  const vanPromise = useLoaderData();
 
   const activeStyle = {
     fontWeight: "700",
@@ -18,18 +34,11 @@ export default function HostVanDetail() {
     color: "#161616",
   };
 
-  if (!van) {
-    return <h1>Loading...</h1>;
-  }
-
-  return (
-    <div className="host-vans-page">
-      <Link to=".." relative="path" className="van-details-back-link">
-        &larr; Back to all vans
-      </Link>
+  function renderHostVanDetail(van) {
+    return (
       <div className="host-vans-details">
         <div className="host-van-details-common">
-          <img className="host-vans-details-img" src={van.imageUrl} alt="" />
+          <img className="host-vans-details-img" src={van.imageUrl} alt="van" />
           <div>
             <div className={`van-type ${van.type} selected`}>{van.type}</div>
             <div className="host-vans-details-name">{van.name}</div>
@@ -62,6 +71,17 @@ export default function HostVanDetail() {
         </nav>
         <Outlet context={van} />
       </div>
+    );
+  }
+
+  return (
+    <div className="host-vans-page">
+      <Link to=".." relative="path" className="van-details-back-link">
+        &larr; Back to all vans
+      </Link>
+      <Suspense fallback={<Loading />}>
+        <Await resolve={vanPromise.van}>{renderHostVanDetail}</Await>
+      </Suspense>
     </div>
   );
 }

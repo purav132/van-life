@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import profilePic from "../assets/images/user-placeholder.png";
 
 export default function Header() {
   const activeStyle = {
@@ -7,6 +8,10 @@ export default function Header() {
     textDecoration: "underline",
     color: "#161616",
   };
+
+  function fakeLogOut() {
+    localStorage.removeItem("loggedin");
+  }
 
   return (
     <header>
@@ -32,6 +37,10 @@ export default function Header() {
         >
           Vans
         </NavLink>
+        <Link to="login">
+          <img src={profilePic} alt="profile-pic" />
+        </Link>
+        <button onClick={fakeLogOut}>x</button>
       </nav>
     </header>
   );
